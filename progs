@@ -1,0 +1,77 @@
+//product-sum
+
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt(); 
+        int result = subtractProductAndSum(n);
+        System.out.println("Result: "+result);
+
+    }
+
+    public static int subtractProductAndSum(int n) {
+        int sum = 0;
+        int product = 1;
+        while(n>0){
+            int digits = n % 10;
+            n = n / 10;
+            
+            product = product * digits;
+            sum = sum + digits;       
+                     
+        }
+        System.out.println(product);
+        System.out.println(sum);
+        return product-sum;
+        
+    }
+}
+
+//Find maximum and minimum among three numbers
+
+import java.util.Scanner;
+public class mimMaxinthree {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first num: ");
+        int first = input.nextInt();
+        System.out.print("Enter the second num: ");
+        int second = input.nextInt();
+        System.out.print("Enter the third num: ");
+        int third = input.nextInt();
+
+        int largest = findlargest(first, second, third);
+        int Smallest = findSmallest(first, second, third);
+
+        System.out.println("Largest number is: " +largest);
+        System.out.print("Smallest number is: "+Smallest);
+
+    }
+
+    static int findlargest (int a,int b,int c) {
+            int largest = a;
+            if(b>largest) {
+                largest = b;
+            }
+            if(c>largest) {
+                largest = c;
+            }
+            return largest;
+    }
+
+    static int findSmallest (int a,int b,int c) {
+        int Smallest = a;
+        if(b<Smallest) {
+            Smallest = b;
+        }
+        if(c<Smallest) {
+            Smallest = c;
+        }
+        return Smallest;
+    }
+}
+
+    
+
